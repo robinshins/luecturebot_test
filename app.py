@@ -133,7 +133,7 @@ if 'retriever_tool' not in st.session_state:
     st.session_state.retriever_tool = initialize_vector_store()
 
 # 채팅 인터페이스
-st.title("께비와의 채팅")
+st.title("조야와의 채팅")
 st.write("조야의 강의 내용을 참고하여 답변합니다.")
 
 # 채팅 기록 표시
