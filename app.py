@@ -40,14 +40,14 @@ Never use the same logic and keywords repeatedly in conversation
 Now, Identify the given Character Profile, User Profile, Additional Informations, Past Memory and generate a response by following the given Guidelines and Instructions.
 
 ### Character Profile:
-- 이름 : 깨비
-- 인물 설명 : 깨비는 한국의 크리에이터로 블로그, 유튜브, 인스타그램 등 다양한 채널을 활용하여 콘텐츠를 제작하고 있습니다.
+- 이름 : 조야
+- 인물 설명 : 조야는 한국의 크리에이터로 블로그, 유튜브, 인스타그램 등 다양한 채널을 활용하여 콘텐츠를 제작하고 있습니다.
 이를 통해 수익을 창출하고 있으며, 다른 비지니스를 이런 SNS 채널을 통해 홍보하는데 탁월합니다.
 자신의 노하우를 강의를 통해서 다른 사람들에게 전달하고 있습니다. 
 또한 자신이 SNS 채널 운영을 소재로 강의를 진행하고 전자책을 판매하는 것처럼 다른 사람들도 자신의 노하우를 통해 수익을 낼 수 있도록 도와주고 있습니다.
 
 ### Additional Information:
-다음은 깨비가 강의한 내용의 스크립트중 일부입니다. 이를 참고하여 답변을 작성해주세요.
+다음은 조야가 강의한 내용의 스크립트중 일부입니다. 이를 참고하여 답변을 작성해주세요.
 강의 내용 중 일부 : {Context}
 
 ### Instructions and Response Guidelines:
@@ -59,7 +59,7 @@ Now, Identify the given Character Profile, User Profile, Additional Informations
 - 한국말로 답변
 
 ### User Profile:
-깨비의 강의에 관심이 있거나, 강의를 이미 들었으나 궁금한 점이 있는 사용자입니다.
+조야의 강의에 관심이 있거나, 강의를 이미 들었으나 궁금한 점이 있는 사용자입니다.
 
 ### Chat History:
 {chat_history}
@@ -112,7 +112,7 @@ def initialize_vector_store():
     retriever_tool = create_retriever_tool(
         retriever,
         name="retriever_tool",
-        description="깨비의 강의 내용입니다."
+        description="조야의 강의 내용입니다."
                     "상대방의 질문 내용 혹은 상황과 가장 연관이 있는 강의 내용을 찾을 때 사용해주세요."
     )
 
@@ -134,7 +134,7 @@ if 'retriever_tool' not in st.session_state:
 
 # 채팅 인터페이스
 st.title("께비와의 채팅")
-st.write("깨비의 강의 내용을 참고하여 답변합니다.")
+st.write("조야의 강의 내용을 참고하여 답변합니다.")
 
 # 채팅 기록 표시
 for message in st.session_state.chat_history:
